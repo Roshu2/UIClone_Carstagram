@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- Jquery -->
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../static/style/login_style.css" type="text/css">
+    <!-- @media 나중에 -->
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="../static/style/login_style.css"/>
+    <!-- JS -->
+    <script src="../static/scripts/login.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+
+    <title>Carstagram</title>
+</head>
+<!--body 레이아웃-->
+<body style="background-image: linear-gradient(70deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)),url(/static/image/background.jpg);">
+<div style="display: flex; flex-direction: column; align-items: center; width: 100%; animation: showText 2s;">
+    <div style="padding: 20px ;text-align: center; width: 350px; height: 400px; margin-top: 200px; opacity:0.8; background: white">
+        <div style="padding-top: 30px; padding-bottom: 40px"><img style="width: 190px; height: 70px" src="/static/image/Carstagram_rogo.png"></div>
+        <!--로그인 폼 레이아웃-->
+        <div style="font-weight: bold; color: gray;padding-bottom: 20px"> 친구들의 사진과 동영상을 보려면 로그인하세요.</div>
+        <div>
+            <div class="form-floating mb-3">
+                <input type="email" class="form-control" style="font-size: 14px; width: 258px; height: 36px; "
+                       id="useremail">
+                <label for="useremail" style="font-size: 14px;padding: 4px 10px">이메일 주소</label>
+                <p class="help-email-login" id="help-email-login"></p>
+            </div>
+        </div>
+        <div>
+            <div class="form-floating mb-3">
+                <input type="password" class="form-control" style="font-size: 14px; width: 258px; height: 36px;"
+                       id="userpw">
+                <label for="userpw" style="font-size: 14px;padding: 4px 10px">비밀번호</label>
+                <p class="help-password-login" id="help-password-login"></p>
+            </div>
+        </div>
+        <button id="login" class="btn btn-primary" style="width: 258px; height: 36px; padding: 4px 10px" onclick="sign_in()">
+            로그인
+        </button>
+    </div>
+    <div style="padding: 20px ;text-align: center; width: 350px; height: 65px; margin-top: 30px; opacity:0.8; background: white">
+        <div> 계정이 없으신가요? <a href="/sign_up">회원가입</a></div>
+    </div>
+</div>
+
+
+</script>
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+
+</body>
+</html>

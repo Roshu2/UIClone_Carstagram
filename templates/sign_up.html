@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Font Awesome CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- Jquery -->
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <!--    CSS-->
+    <link href="../static/style/sign_up_style.css" rel="stylesheet">
+    <!-- @media 나중에 -->
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="../static/style/sign_up_style.css"/>
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+    <script type="text/javascript" src=/static/scripts/sign_up.js></script>
+    <title>회원 가입</title>
+</head>
+<!--바디 레이아웃-->
+<body style="background-size: cover; background-image: linear-gradient(70deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4)), url(/static/image/backgroundimg.jpg);">
+
+
+<div style="display: flex; flex-direction: column; align-items: center; width: 100%; animation: showText 2s;">
+    <div style="display: flex; flex-direction: row; padding: 10%; margin-right: 8%;">
+        <!--회원가입 레이아웃-->
+        <div>
+            <!--        회원가인 폼 박스-->
+            <div style="padding: 20px ;text-align: center; width: 350px; height: 500px; margin-top: -10%; margin-left: 100px; background-color: white; opacity: 0.8;">
+                <div style="padding-top: 30px;padding-bottom: 40px"><img style="width: 190px; height:70px"
+                                                                         src="/static/image/Carstagram_logo.png">
+                </div>
+
+                <div style="font-weight: bold; color: gray;padding-bottom: 20px"> 친구들의 사진과 동영상을 보려면 가입하세요.</div>
+                <!--                    로그인 입력폼-->
+                <!--                    로그인 입력폼-->
+                <div class="form-floating mb-3 field has-addons">
+                    <input type="email" class="form-control"
+                           style="font-size: 14px; height: 24px; width: 188px;"
+                           id="useremail" onclick="remove_dup()"
+                           placeholder="name@example.com">
+                    <label for="useremail" style="font-size: 14px;padding: 4px 10px">이메일 주소</label>
+                    <div id="btn-check-dup" class="control">
+                        <button class="btn btn-primary" style="height: 34px;" onclick="check_email()">중복확인</button>
+                    </div>
+                </div>
+                <p class="help-email" id="help-email-exist"></p>
+                <div class="form-floating mb-3 field has-addons">
+                    <input type="text" class="form-control"
+                           style="font-size: 14px; height: 24px; width: 188px;"
+                           id="usernick" onclick="remove_dup()"
+                           placeholder="nickname..">
+                    <label for="usernick" style="font-size: 14px;padding: 4px 10px">닉네임</label>
+                    <div id="btn-check-dup" class="control">
+                        <button class="btn btn-primary" style="height: 34px;" onclick="check_nick()">중복확인</button>
+                    </div>
+                </div>
+                <p class="help-nick" id="help-nick-exist"></p>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control"
+                           style="font-size: 14px; height: 24px; width: 258px;"
+                           id="username"
+                           placeholder="name...">
+                    <label for="username" style="font-size: 14px;padding: 4px 10px">이름</label>
+                    <p class="help-name" id="help-name-exist"></p>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="password" class="form-control"
+                           style="font-size: 14px; height: 24px; width: 258px;"
+                           id="userpw"
+                           placeholder="password...">
+                    <label for="userpw" style="font-size: 14px;padding: 4px 10px">비밀번호</label>
+                    <p class="help-pw" id="help-pw-exist"></p>
+                </div>
+                <button class="btn btn-primary" style="width: 258px; height:36px" onclick="sign_up()">
+                    가입
+                </button>
+            </div>
+            <!--    로그인 페이지 이동 박스-->
+            <div
+                    style="padding: 20px ;text-align: center; width: 350px; height: 70px; margin-top: 30px; margin-left: 100px; background:white;opacity: 0.8;">
+                <div> 계정이 있으신가요? <a href="/login">로그인</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+</html>

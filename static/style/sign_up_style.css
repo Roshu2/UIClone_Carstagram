@@ -1,0 +1,97 @@
+.sign_up_img {
+    width: 300px;
+    height: 400px;
+}
+
+/*회원가입 입력폼*/
+.mb-3 {
+    margin-left: 24px;
+}
+
+/* 모바일 Device : 0 ~ 400 */
+@media screen and (max-width: 10px) {
+
+    html {
+        /*background: red;*/
+
+    }
+
+    .signimgLayer {
+        /*padding: 1.0em;*/
+        display: none;
+
+    }
+
+}
+
+@keyframes showText {
+    from {
+        transform: translate(0px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(0px);
+        opacity: 1;
+    }
+}
+
+/**/
+/**/
+/**/
+
+.section {
+    padding: 1rem 1.5rem;
+    max-width: 750px;
+    margin: auto;
+}
+
+.title {
+    font-weight: 800;
+    font-size: 5rem;
+}
+
+.subtitle {
+    font-size: 2rem;
+}
+
+.is-sparta {
+    color: #e8344e !important;
+}
+
+/**/
+/* 로그인 박스 */
+/**/
+.button.is-sparta {
+    background-color: #e8344e;
+    border-color: transparent;
+    color: #fff !important;
+    width: 70px;
+}
+
+.button.is-sparta.is-outlined {
+    background-color: transparent;
+    border-color: #e8344e;
+    color: #e8344e !important;
+}
+
+.help {
+    color: gray;
+}
+
+/**/
+/* 토글 기능 */
+/**/
+.is-hidden {
+    display: none!important;
+}
+
+.form-floating {
+    display: flex;
+    flex-direction: row;
+}
+
+.btn-primary {
+    width: 70px;
+    font-size: 11px;
+}

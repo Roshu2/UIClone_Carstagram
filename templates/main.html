@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="Carstagram"/>
+    <meta property="og:description" content="링크를 통해 확인해보세요!"/>
+    <meta property="og:image" content="http://www.autoherald.co.kr/news/photo/202101/39860_69195_3424.jpeg"/>
+
+    <!-- 부트스트랩 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!--    구글 머터리얼 아이콘   -->
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+          rel="stylesheet">
+    <link rel="stylesheet"
+          href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+    <!--    jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- 토큰 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+    <!--    css 가져오기-->
+    <link rel="stylesheet" href="../static/style/main_style.css" type="text/css">
+
+
+    <title>Carstagram</title>
+
+</head>
+
+
+<body>
+<!--상단 네비게이션바---------------------------------------------------------------------------------------------------->
+
+<nav class="navbar navbar-expand-lg navbar-light"
+     style="position: fixed; display: flex; flex-direction: row; width: 100%; border-bottom: solid 1px #dbdbdb; background-color: #c7c7c7;z-index: 1;">
+    <div class="container-fluid" style="justify-content: space-between; flex-wrap: nowrap; max-width: 940px;">
+        <!--        instagram 이미지-------------------------------------------------------------------------------->
+        <a class="navbar-brand" href="/main">
+            <img style="width: 100px;" src="../static/image/Carstagram_rogo4.png"></a>
+        <!--            검색창-------------------------------------------------------------------------------------->
+        <input class="form-control me-2 aLayer" style="max-width: 300px;" type="search" placeholder="검색"
+               aria-label="Search">
+        <div style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
+            <!--            아이콘---------------------------------------------------------------------------------->
+            <a href="/main"><span style="margin: 6px 12px 0 12px;"
+                                  class="material-icons">home</span></a>
+            <span style="margin: 0 12px 0 12px;" class="material-icons-outlined">send</span>
+            <button id="open-post-modal" style="background-color: #c7c7c7; border: none; margin-top: 7px;">
+                <span style="margin: 0 12px 0 12px;" class="material-icons-outlined">add_box</span>
+            </button>
+            <span style="margin: 0 12px 0 12px;" class="material-icons-outlined">explore</span>
+            <button style="background-color: #c7c7c7; border: none; margin-top: 7px;">
+                <span style="margin: 0 12px 0 12px;" class="material-icons-outlined">favorite_border</span>
+            </button>
+            <div class="mini-profile" style="float: right; margin-left: 10px;">
+                <a href=""><img class="profile" style="margin-bottom: 6px;"
+                                src="http://kaihuastudio.com/common/img/default_profile.png"></a>
+            </div>
+        </div>
+    </div>
+</nav>
+<!------------------------중앙레이아웃-------------------------------------------------------------------------------->
+<div style="display: flex; flex-direction: row; position: relative; justify-content: center; top: 85px;">
+    <!----------------왼 쪽메인화면창--------------------------------------------------------------------------------->
+    <div class="cLayer" id="post-feed-box"
+         style="max-width: 600px; width: 100%; height: 100%; position: relative; font-size: 13px; font-weight: bold;">
+        <!------------    왼쪽 스토리창------------------------------------------------------------------------------->
+        <!-------   스토리 박스    ----------------------------------------------------------------------------------->
+        <div class="story-box">
+            <!--                상단의 이미지와 이름 그리고 ''' 아이콘---------------------------------------->
+            <div style="padding: 15px;">
+                <div class="story-profile">
+                    <a href="https://www.mercedes-benz.co.kr/passengercars.html?group=all&subgroup=see-all&view=BODYTYPE"
+                       target="_blank"><img
+                            src="https://w.namu.la/s/1c1ea4d2ef4dc157bf7560ab7ce28a2d8ec671a268144f4c8757218d4b319779361afbea0ec328ba61623fdd3bc57748ea618ab4bc7ba26c10af70eb69cd7c56014d6df720f6a9a29c275759c985f2957f4e69af77b625be35317eadac662676"
+                            alt="photo"
+                            class="rounded-circle  profile"/></a>
+                </div>
+                <p class="story-name">Benz<br></p>
+            </div>
+            <div style="padding: 15px;">
+                <div class="story-profile">
+                    <a href="https://www.bmw.co.kr/ko/index.html" target="_blank"><img
+                            src="https://w7.pngwing.com/pngs/136/324/png-transparent-bmw-8-series-car-logo-mini-bmw-emblem-trademark-logo.png"
+                            alt="photo"
+                            class="rounded-circle  profile"/></a>
+                </div>
+                <p class="story-name">BMW<br></p>
+            </div>
+            <div style="padding: 15px;">
+                <div class="story-profile">
+                    <a href="https://www.audi.co.kr/kr/web/ko.html" target="_blank"><img
+                            src="https://t1.daumcdn.net/cfile/blog/994189435B3AD87828"
+                            alt="photo"
+                            class="rounded-circle  profile"/></a>
+                </div>
+                <p class="story-name">AUDI<br></p>
+            </div>
+            <div style="padding: 15px;">
+                <div class="story-profile">
+                    <a href="https://www.porsche.com/korea/ko/" target="_blank"><img
+                            src="https://t1.daumcdn.net/cfile/tistory/9962AF4D5ED059BA23"
+                            alt="photo"
+                            class="rounded-circle  profile"/></a>
+                </div>
+                <p class="story-name">Porsche<br></p>
+            </div>
+            <div style="padding: 15px;">
+                <div class="story-profile">
+                    <a href="https://www.ferrari.com/ko-KR" target="_blank"><img
+                            src="https://mblogthumb-phinf.pstatic.net/MjAxODA5MDNfNDAg/MDAxNTM1OTQ5MjUxNTA3.3C9omS7yj-2G8z4S7G8uOPBAD1g2ABYcby9k7578hCQg.8a-v1xBfNKq1u09f8JN9kv0X9zMSJfuAdBJFwNzyM7Eg.JPEG.ooc1001/Ferrari-emblem_ccc.jpg?type=w800"
+                            alt="photo"
+                            class="rounded-circle  profile"/></a>
+                </div>
+                <p class="story-name">Ferrari<br></p>
+            </div>
+            <div style="padding: 15px;">
+                <div class="story-profile">
+                    <a href="https://www.lamborghini.com/en-en/ownership/dealer-locator/lamborghini-seoul"
+                       target="_blank"><img
+                            src="https://t1.daumcdn.net/cfile/tistory/993A79365ED06B942C"
+                            alt="photo"
+                            class="rounded-circle  profile"/></a>
+                </div>
+                <p class="story-name">Lamborghimi<br></p>
+            </div>
+            <!--            위에다가 링크이미지 삽입-->
+        </div>
+        <!--            첫번째 피드!------------------------------------------------------------------------------------>
+    </div>
+
+    <!--------------------    오른쪽단 피드창-------------------------------------------------------------------------------->
+    <div class="bLayer"
+         style=" max-width: 350px; width: 100%; max-height: 800px; height: 100%; position:sticky; top: 85px; margin-left: 34px;">
+        <div style="margin-top: 8%; margin-left: 1%; margin-bottom: 2%;">
+            <!--            내 프로필 부분----------------------------------------------------------------------------------->
+            <div style="align-items: center; display: flex;" id="user-info">
+
+            </div>
+            <!--        회원 추천------------------------------------------------------------------------------------------->
+            <div style="align-items: center; display: flex; margin-top: 4%">
+                <div style="font-size: 14px;color: #fafafa; font-weight: bold">
+                    회원님을 위한 추천
+                </div>
+                <div style="margin-left: 35.4%; font-size: 12px;">
+                    <button style="background: none; border: none; color: white; font-weight: bold">모두 보기</button>
+                </div>
+            </div>
+            <!--        추천 받은 회원 사진,이름,팔로우------------------------------------------------------------------------>
+            <div id="recommend-user">
+
+            </div>
+            <!--로그아웃 버튼-->
+            <button class="logout-btn" onclick="logout()">로그아웃</button>
+
+            <!--        우측 하단 푸터--------------------------------------------------------------------------------------->
+            <footer style="margin-top: 8%; font-size: 12px; font-weight: lighter; color:#c7c7c7">스파르타 내일배움캠프
+                김삼이일팀<br><br>
+                © 2022 CARSTAGRAM FROM KTLO
+            </footer>
+        </div>
+    </div>
+</div>
+
+<!-----------모달------------------------------------------------------------------------------------------------------>
+<div id="modal-option" class="modal-overlay">
+    <div id="modal-script" class="modal_body">
+        <button style="color:red; font-weight: bold; background-color: white; margin-top: -20px; border: none; border-radius: 10px;">
+            신고
+        </button>
+        <button class="modal-text" style="color: red; font-weight: bold;">
+            팔로우 취소
+        </button>
+        <button class="modal-text">
+            게시물로 이동
+        </button>
+        <button class="modal-text">
+            공유 대상...
+        </button>
+        <button class="modal-text">
+            링크 복사
+        </button>
+        <button class="modal-text" style="border-bottom: 1px solid #dbdbdb;">
+            퍼가기
+        </button>
+        <button id="close-modal" class="close-area" style="background-color: white; border: none; border-radius: 10px;">
+            <span>취소</span>
+        </button>
+    </div>
+</div>
+
+
+<!-- 게시글 작성 버튼 클릭시 일기장 작성 팝업 -->
+<div id="post-modal" class="modal-overlay2">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <div class="posting-box">
+                <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="customFile">
+                    <label class="custom-file-label" for="file">사진 선택하기</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="post_hashtag" placeholder="해쉬태그">
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="내용 입력" class="form-control" id="post_comment" rows="3"></textarea>
+                </div>
+                <button onclick="post_posting()" type="submit" class="btn btn-primary">저장하기</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="../static/scripts/main_script.js" rel="stylesheet" type="text/javascript"></script>
+<script src="../static/scripts/main_post.js" rel="stylesheet" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+>>>>>>> personal_branch
+</body>
+</html>

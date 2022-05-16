@@ -1,0 +1,295 @@
+body {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/image/Pabric.jpg");
+}
+
+
+/*메뉴바 우측 상단 미니프로필*/
+.mini-profile {
+    width: 24px;
+    height: 24px;
+    border-radius: 70%;
+    overflow: hidden;
+}
+
+/*스토리 라인 프로필*/
+.story-profile {
+    width: 65px;
+    height: 65px;
+    border-radius: 70%;
+    position: relative;
+    border: 3px solid transparent;
+    background-image: linear-gradient(#fff, #fff),
+    linear-gradient(to left, #b347ab, #d42694, orange 100%);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    /*overflow: hidden;*/
+}
+
+/*스토리 박스*/
+.story-box {
+    height: 119px;
+    border: solid 1px #dbdbdb;
+    display: flex;
+    border-radius: 2px;
+    justify-content: space-around;
+    background-color: white;
+    font-weight: lighter;
+    font-size: 11px;
+    color: #696868;
+    text-align: center;
+    overflow: hidden;
+}
+
+.story-name {
+    margin-top: 5px;
+}
+
+/*피드박스 좌측 상단 미니프로필*/
+.box-profile {
+    width: 30px;
+    height: 30px;
+    border-radius: 70%;
+    overflow: hidden;
+}
+
+/*프로필사진들*/
+.profile {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*슬라이드 이미지*/
+.carousel-item {
+    width: 100%;
+    height: 600px;
+}
+
+.d-block {
+    display: block;
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+/*댓글창*/
+input:focus {
+    outline: none;
+    border: none;
+}
+
+/*왼쪽 메인화면 프로필*/
+.left-profile {
+    width: 55px;
+    height: 55px;
+    border-radius: 70%;
+    overflow: hidden;
+}
+
+/*왼쪽 메인화면 추가정보프로필*/
+.left-mini-profile {
+    width: 37px;
+    height: 37px;
+    border-radius: 70%;
+    overflow: hidden;
+}
+
+/*상단 스토리 이미지*/
+.rounded-circle {
+    padding: 2px;
+
+}
+
+
+/*피드 박스*/
+.feed-box {
+    border: solid 1px #dbdbdb;
+    border-radius: 2px;
+    margin-top: 30px;
+    background-color: white;
+}
+
+/*추천회원*/
+.rec-member {
+    align-items: center;
+    display: flex;
+    margin-top: 2px;
+}
+
+/*팔로우 버튼*/
+.follow-btn {
+    background: none;
+    border: none;
+    color: cornflowerblue;
+}
+
+/*좋아요 버튼*/
+.like-btn {
+    background-color: white;
+    border: none;
+    margin: -1px -4px -3px -3px;
+}
+
+
+
+/*a태그*/
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/*신고 모달창*/
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.4);
+    /*animation: showText1 0.5s;*/
+}
+
+.modal_body {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 330px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    line-height: 50px;
+}
+
+.modal-text {
+    border-bottom: 0;
+    border-left: 0;
+    border-right: 0;
+    border-top: 1px solid #dbdbdb;
+    background-color: white;
+}
+
+.modal-overlay2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 330px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    line-height: 50px;
+}
+
+.logout-btn {
+    margin-top: 50px;
+    margin-left: 30px;
+    margin-bottom: 30px;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/static/image/Pabric.jpg");
+    border: none;
+    color: white;
+}
+
+.section {
+    padding: 1rem 1.5rem;
+    max-width: 750px;
+    margin: auto;
+}
+
+.is-sparta {
+    color: #e8344e !important;
+}
+
+.button.is-sparta {
+    background-color: #e8344e;
+    border-color: transparent;
+    color: #fff !important;
+}
+
+.button.is-sparta.is-outlined {
+    background-color: transparent;
+    border-color: #e8344e;
+    color: #e8344e !important;
+}
+
+.modal-content {
+    width: 600px;
+    max-width: 80%;
+}
+
+input::-webkit-calendar-picker-indicator {
+    display: none;
+}
+
+.image img {
+    object-fit:cover;
+    width:100%;
+    height:100%;
+}
+
+/*@keyframes showText1 {*/
+/*    from {*/
+/*        transform: translateX(0px);*/
+/*        opacity: 0;*/
+/*    }*/
+
+/*    to {*/
+/*        transform: translateX(0px);*/
+/*        opacity: 1;*/
+/*    }*/
+/*}*/
+
+@media screen and (max-width: 640px) {
+
+    .aLayer {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 1000px) {
+
+    .bLayer {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 640px) {
+
+    .cLayer {
+        width: 90%;
+        height: 60%;
+        overflow: hidden;
+    }
+
+}
+
